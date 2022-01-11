@@ -4,7 +4,7 @@
         <title>Aim Trainer Project</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="examples/main.css">
+        <link type="text/css" rel="stylesheet" href="/AimtrainerV5/examples/main.css">
         <style>
             #blocker {
                 position: absolute;
@@ -41,11 +41,11 @@
 
 <script type="module">
 	
-    import * as THREE from '../build/three.module.js';
+    import * as THREE from '/AimtrainerV5/build/three.module.js';
 
-    import { PointerLockControls } from '/examples/jsm/controls/PointerLockControls.js';
+    import { PointerLockControls } from '/AimtrainerV5//examples/jsm/controls/PointerLockControls.js';
 
-	import { OBJLoader } from '/examples/jsm/loaders/OBJLoader.js';
+	import { OBJLoader } from '/AimtrainerV5/examples/jsm/loaders/OBJLoader.js';
 //Get the height and the width of the window
 var ww = window.innerWidth,
 	wh = window.innerHeight;
@@ -185,12 +185,12 @@ function init(){
 
 	//Create a skybox
 let materialArray = [];
-        let texture_ft = new THREE.TextureLoader().load( 'textures/sky/sky_ft.jpg');
-        let texture_bk = new THREE.TextureLoader().load( 'textures/sky/sky_bk.jpg');
-        let texture_up = new THREE.TextureLoader().load( 'textures/sky/sky_up.jpg');
-        let texture_dn = new THREE.TextureLoader().load( 'textures/sky/sky_dn.jpg');
-        let texture_rt = new THREE.TextureLoader().load( 'textures/sky/sky_rt.jpg');
-        let texture_lf = new THREE.TextureLoader().load( 'textures/sky/sky_rt.jpg');
+        let texture_ft = new THREE.TextureLoader().load( '/AimtrainerV5/textures/sky/sky_ft.jpg');
+        let texture_bk = new THREE.TextureLoader().load( '/AimtrainerV5/textures/sky/sky_bk.jpg');
+        let texture_up = new THREE.TextureLoader().load( '/AimtrainerV5/textures/sky/sky_up.jpg');
+        let texture_dn = new THREE.TextureLoader().load( '/AimtrainerV5/textures/sky/sky_dn.jpg');
+        let texture_rt = new THREE.TextureLoader().load( '/AimtrainerV5/textures/sky/sky_rt.jpg');
+        let texture_lf = new THREE.TextureLoader().load( '/AimtrainerV5/textures/sky/sky_rt.jpg');
           
         materialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
         materialArray.push(new THREE.MeshBasicMaterial( { map: texture_bk }));
@@ -289,7 +289,7 @@ window.onclick = myFunction;
 
 function planes(){
 
-	const   texture = new THREE.TextureLoader().load('textures/walltext.jpg');
+	const   texture = new THREE.TextureLoader().load('/AimtrainerV5/textures/walltext.jpg');
 	const material = new THREE.MeshLambertMaterial({map : texture});
 
     let floorGeometry = new THREE.PlaneGeometry( 2500, 2500 );
@@ -425,7 +425,7 @@ const sound = new THREE.Audio( listener );
 
 // load a sound and set it as the Audio object's buffer
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load( 'sound/hit.ogg', function( buffer ) {
+audioLoader.load( '/AimtrainerV5/sound/hit.ogg', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( false );
 	sound.setVolume( 0.5 );
@@ -441,7 +441,7 @@ const sound2 = new THREE.Audio( listener2 );
 
 // load a sound and set it as the Audio object's buffer
 const audioLoader2 = new THREE.AudioLoader();
-audioLoader2.load( 'sound/miss.ogg', function( buffer ) {
+audioLoader2.load( '/AimtrainerV5/sound/miss.ogg', function( buffer ) {
 	sound2.setBuffer( buffer );
 	sound2.setLoop( false );
 	sound2.setVolume( 0.5 );
